@@ -1,0 +1,4 @@
+.menu-item-with-icon {
+  @apply flex items-center cursor-pointer;
+  gap: 10px;
+}
