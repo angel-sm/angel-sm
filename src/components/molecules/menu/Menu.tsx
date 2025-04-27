@@ -45,18 +45,13 @@ const Menu: React.FC = () => {
   ];
 
   const LargeMenu = (
-    <>
-      <ul className="flex gap-4 itemx-center jusitfy-center">
-        {sections.map((section) => (
-          <li
-            key={section.name}
-            className="text-slate-500 hover:text-slate-900"
-          >
-            <a href={section.link}>{section.name}</a>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="flex gap-4 itemx-center jusitfy-center">
+      {sections.map((section) => (
+        <li key={section.name} className="text-slate-500 hover:text-slate-900">
+          <a href={section.link}>{section.name}</a>
+        </li>
+      ))}
+    </ul>
   );
 
   return (
@@ -73,7 +68,7 @@ const Menu: React.FC = () => {
           !show && "hidden"
         )}
       >
-        <div className="controller">
+        <div className="max-w-[80%] lg:max-w-[70%] md:max-w-[90%] m-auto">
           <div className="h-[8vh] flex justify-end items-center">
             <button type="button">
               <IconX onClick={handleToggleMenu} />
